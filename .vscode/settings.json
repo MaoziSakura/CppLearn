@@ -1,0 +1,9 @@
+{
+    "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd",
+    "editor.formatOnSave": true,
+    "C_Cpp.formatting": "clangFormat",
+    "clangd.fallbackFlags": [
+        "-std=c++17"
+    ],
+    "editor.acceptSuggestionOnEnter": "off"
+}
