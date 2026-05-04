@@ -1,0 +1,55 @@
+Language: Cpp
+# 基础风格
+# BasedOnStyle: LLVM
+
+# 强制模板声明后换行
+AlwaysBreakTemplateDeclarations: Yes
+
+#public靠左对齐
+AccessModifierOffset: -4
+
+#namespace 包裹内容也不会缩进
+NamespaceIndentation: None
+
+# 缩进宽度
+IndentWidth: 4
+
+# 每行字符限制（现代宽屏建议 100-120）
+ColumnLimit: 180
+
+# 指针/引用靠近类型还是变量名 (Left: int* p; Right: int *p;)
+PointerAlignment: Left
+
+# 连续赋值时等号对齐
+AlignConsecutiveAssignments: false
+
+# 包含头文件的排序规则
+SortIncludes: true
+
+# 大括号换行风格 (Attach: 不换行; Allman: 另起一行)
+# BreakBeforeBraces: Allman
+
+# 预处理器对齐
+IndentPPDirectives: AfterHash
+
+# --- 1. 允许空括号合并的关键设置 ---
+AllowShortBlocksOnASingleLine: Empty
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: None
+
+# --- 2. 强制非空括号换行的关键设置 ---
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true           # 类定义 { 换行
+  AfterControlStatement: Always # if/for/while { 换行
+  AfterFunction: true        # 函数定义 { 换行
+  AfterNamespace: true       # 命名空间 { 换行
+  AfterStruct: true          # 结构体 { 换行
+  AfterUnion: true           # 联合体 { 换行
+  BeforeCatch: true          # catch 之前换行
+  BeforeElse: true           # else 之前换行
+  
+  # --- 3. 核心平衡点：即使上面设置了换行，如果是空的则不拆分 ---
+  SplitEmptyFunction: false  
+  SplitEmptyRecord: false    
+  SplitEmptyNamespace: false 
